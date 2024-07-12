@@ -8,6 +8,8 @@ const app = express();
 const http = require("http");
 const server = http.createServer(app);
 
+const stellar_toml_path = process.env.STELLAR_TOML_FILE_PATH;
+
 function insertNewNFTtoTOML(code, issuer, name, desc, image, display_decimals) {
   let data = "\n[[CURRENCIES]]\n";
   data = data + "code=\"" + code + "\"\n";
@@ -18,7 +20,7 @@ function insertNewNFTtoTOML(code, issuer, name, desc, image, display_decimals) {
   data = data + "display_decimals=\"" + display_decimals + "\"\n";
   
   try {
-    fs.writeFileSync('stellar.toml', data, {flag: 'a+'});
+    fs.writeFileSync(stellar_toml_path, data, {flag: 'a+'});
     return {
       ok: true,
       error: null
