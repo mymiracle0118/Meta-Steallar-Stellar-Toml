@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-link-ws": "^1.0.20",
+    "body-parser": "^1.20.2",
     "borsh": "^0.7.0",
     "cors": "^2.8.5",
     "dayjs": "^1.10.7",
@@ -22,6 +23,7 @@
     "getprovider": "^1.0.2",
     "mongoose": "^6.4.7",
     "nodemon": "^2.0.15",
+    "os": "^0.1.2",
     "socket.io": "^4.5.1"
   },
   "devDependencies": {
